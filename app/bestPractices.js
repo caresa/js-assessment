@@ -8,7 +8,7 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     globals : function() {
-       var myObject = {
+      var myObject = {
         name : 'Jory'
       };
 
@@ -17,7 +17,7 @@ define(function() {
 
     functions : function(flag) {
       if (flag) {
-        function getValue() { return 'a'; }
+       var getValue = function getValue() { return 'a'; }
       } else {
         function getValue() { return 'b'; }
       }
@@ -26,11 +26,15 @@ define(function() {
     },
 
     parseInt : function(num) {
-      return parseInt(num);
+       return parseFloat(num);
     },
 
     identity : function(val1, val2) {
-
+      if (val1 === val2){
+        return true;
+      } else {
+        return false;
+      }
     }
   };
 });
