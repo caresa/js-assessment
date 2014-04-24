@@ -41,29 +41,33 @@ define(function() {
 },
 
     append : function(arr, item) {
-       var result = arr.push(item);
-       return result.length;
-
+       arr.push(item);
+       return arr;
     },
 
     truncate : function(arr) {
-
+        arr.pop();
+        return arr;
     },
 
     prepend : function(arr, item) {
-
+        arr.unshift(item);
+        return arr;
     },
 
     curtail : function(arr) {
-
+        arr.shift();
+        return arr;
     },
 
     concat : function(arr1, arr2) {
-
+        var result = arr1.concat(arr2);
+        return result;
     },
 
     insert : function(arr, item, index) {
-
+        arr.splice(index, item);
+        return arr;
     },
 
     count : function(arr, item) {
