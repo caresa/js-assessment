@@ -41,6 +41,8 @@ define(function() {
 },
 
     append : function(arr, item) {
+       var result = arr.push(item);
+       return result.length;
 
     },
 
