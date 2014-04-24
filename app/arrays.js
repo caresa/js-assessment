@@ -32,8 +32,13 @@ define(function() {
     },
 
     removeWithoutCopy : function(arr, item) {
-
-    },
+        for(var i in arr){
+            if (arr[i] == item) {
+                arr.splice(i,item);
+            }
+        }
+        return arr;
+},
 
     append : function(arr, item) {
 
