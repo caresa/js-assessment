@@ -7,10 +7,27 @@ define(function() {
     },
 
     sum : function(arr) {
+        var total = 0;
 
+        for (var i in arr) { total += arr[i]; }
+            return total;
     },
 
     remove : function(arr, item) {
+
+        // for (var i=0; i<arr.length; i++) {
+        //     if (arr[i] == item) {
+        //         arr.splice(i,1);
+        //     }
+        // }
+        // return arr;
+
+        for(var i in arr){
+            if (arr[i] == item) {
+                arr.splice(i,1);
+            }
+        }
+        return arr;
 
     },
 
